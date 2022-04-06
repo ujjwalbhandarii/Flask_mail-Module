@@ -8,7 +8,7 @@ app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'ujjwalbhandari144@gmail.com'
 # app.config['MAIL_PASSWORD'] = os.environment.get('PASSWORD') # because of being confidential
 # or ⬇️
-app.config['MAIL_PASSWORD'] = 'Ujjwal123#@1' 
+app.config['MAIL_PASSWORD'] = 'you_password_here'  #it's on backend. so, not to worry about writing your password here 
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
