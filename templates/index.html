@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact us</title>
+  </head>
+  <body>
+    <h1>contact us</h1>
+    <p>fill this form, we will text you shortly</p>
+    <form action="{{url_for('send_message')}}" method="post">
+      <input
+        type="email"
+        name="email"
+        placeholder="Enter your email"
+        required
+        id=""
+      />
+
+      <input type="text" name="subject" placeholder="subject" required />
+
+      <textarea
+        name="message"
+        placeholder="message body"
+        id=""
+        cols="30"
+        rows="10"
+      ></textarea>
+
+      <input type="submit" value="Send Message" />
+    </form>
+  </body>
+</html>
