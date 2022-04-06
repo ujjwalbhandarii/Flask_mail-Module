@@ -5,14 +5,9 @@ app = Flask(__name__)
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'ujjwalbhandari144@gmail.com'
-<<<<<<< HEAD
-
-app.config['MAIL_PASSWORD'] = 'Ujjwal123#@1'
-=======
-# app.config['MAIL_PASSWORD'] = os.environment.get('PASSWORD') # because of being confidential
-# or ⬇️
-app.config['MAIL_PASSWORD'] = 'you_password_here'  #it's on backend. so, not to worry about writing your password here 
->>>>>>> 3abd960ec08a5a57d659fbbf3c7b1c935969253f
+app.config['MAIL_PASSWORD'] = 'your_password_here'  # will run on backend
+# it's on backend. so, not to worry about writing your password here
+app.config['MAIL_PASSWORD'] = 'you_password_here'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
