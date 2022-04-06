@@ -2,6 +2,7 @@ from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
+# if below variable were miswritten then it might cause gai error
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
 app.config['MAIL_USERNAME'] = 'ujjwalbhandari144@gmail.com'
