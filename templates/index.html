@@ -5,30 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact us</title>
+    <link rel="stylesheet" href="../static/style.css" />
   </head>
   <body>
-    <h1>contact us</h1>
-    <p>fill this form, we will text you shortly</p>
-    <form action="{{url_for('send_message')}}" method="post">
-      <input
-        type="email"
-        name="email"
-        placeholder="Enter your email"
-        required
-        id=""
-      />
+    <div class="container">
+      <h1>Contact us</h1>
+      <p>Fill this form, we will text you shortly</p>
+      <form action="{{url_for('send_message')}}" method="post">
+        <input
+          class="form-box"
+          type="email"
+          name="email"
+          placeholder="Enter your email"
+          required
+          id=""
+        />
 
-      <input type="text" name="subject" placeholder="subject" required />
+        <input
+          class="form-box"
+          type="text"
+          name="subject"
+          placeholder="subject"
+          required
+        />
 
-      <textarea
-        name="message"
-        placeholder="message body"
-        id=""
-        cols="30"
-        rows="10"
-      ></textarea>
+        <textarea
+          class="form-box"
+          name="message"
+          placeholder="message body"
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
 
-      <input type="submit" value="Send Message" />
-    </form>
+        <input class="form-button" type="submit" value="Send Message" />
+      </form>
+    </div>
   </body>
 </html>
