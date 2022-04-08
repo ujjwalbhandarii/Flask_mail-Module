@@ -2,23 +2,19 @@ from flask import Flask, render_template, request
 from flask_mail import Mail, Message
 
 app = Flask(__name__)
-# if below variable were miswritten then it might cause gai error
+
 app.config['MAIL_SERVER'] = 'smtp.gmail.com'
 app.config['MAIL_PORT'] = 465
-app.config['MAIL_USERNAME'] = 'ujjwalbhandari144@gmail.com'
-app.config['MAIL_PASSWORD'] = 'your_password_here'  # will run on backend
-# it's on backend. so, not to worry about writing your password here
-app.config['MAIL_PASSWORD'] = 'you_password_here'
+app.config['MAIL_USERNAME'] = 'your_sender_gmail'
+app.config['MAIL_PASSWORD'] = 'your_password_here'
 app.config['MAIL_USE_TLS'] = False
 app.config['MAIL_USE_SSL'] = True
 
-mail = Mail(app)  # mail libary initalized
-
+mail = Mail(app)
 
 @app.route('/')
 def index():
     return render_template('index.html')
-
 
 @app.route('/send_message', methods=['GET', 'POST'])
 def send_message():
@@ -26,13 +22,12 @@ def send_message():
         email = request.form['email']
         subject = request.form['subject']
         msg = request.form['message']
-        message = Message(subject, sender='ujjwalbhandari144@gmail.com',
-                          recipients=['ujjwalbhandari14@gmail.com'])
+        message = Message(subject, sender='your_sender_gmail',
+                          recipients=['your_gmail_where_form_data_will_be_forwarded'])
         message.body = msg
         mail.send(message)
         success = "message sent"
         return render_template('AfterSend.html', success=success)
-
 
 if __name__ == "__main__":
     app.run(debug=True)
